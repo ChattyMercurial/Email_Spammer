@@ -1,0 +1,6 @@
+Have you ever wondered how your gmail or any other mail clients classify your emails
+into spam or ham (basically, non-spam emails) ?!
+They basically apply Naīve Bayes Theorem which is widely used in Machine Learning.
+In my emails folder , i have provided some ham and spam mails and we are going to train our model using this data set.
+Logic used is simple. Any mail having the word 'free' in it is classified as SPAM.
+Based on this we are going to test our model.
