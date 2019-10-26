@@ -39,7 +39,7 @@ def dataFrameFromDirectory(path, classification):
     return DataFrame(rows, index=index)
 
 data = DataFrame({'message': [], 'class': []})
-
+#use your own path where you have downloaded free spam and ham mails given in my repository.
 data = data.append(dataFrameFromDirectory(r'C:\Users\ckaus\Machine_Learning_Resources\Compressed\MLCourse\emails\spam', 'spam'))
 data = data.append(dataFrameFromDirectory(r'C:\Users\ckaus\Machine_Learning_Resources\Compressed\MLCourse\emails\ham', 'ham'))
 print(data.head())
