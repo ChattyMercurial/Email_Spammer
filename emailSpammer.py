@@ -44,13 +44,13 @@ data = data.append(dataFrameFromDirectory(r'C:\Users\ckaus\Machine_Learning_Reso
 data = data.append(dataFrameFromDirectory(r'C:\Users\ckaus\Machine_Learning_Resources\Compressed\MLCourse\emails\ham', 'ham'))
 print(data.head())
 vectorizer = CountVectorizer()
-counts = vectorizer.fit_transform(data['message'][1:750].values)#it will convert every word to respective numbers and give the word's frequency
+counts = vectorizer.fit_transform(data['message'][1:25].values)#it will convert every word to respective numbers and give the word's frequency
 
 classifier = MultinomialNB()#needs two inputs: counts and targets
-targets = data['class'][1:750].values#list the frequency of spam and ham type emails
+targets = data['class'][1:25].values#list the frequency of spam and ham type emails
 classifier.fit(counts, targets)#creates the model to check spam and ham emails
 #the classifier gets trained with the datasets in dataframe on applying Naive Bayes MultinomialNB()
-examples = data['message'][750:1200]
+examples = data['message'][25:50]
 example_counts = vectorizer.transform(examples)
 predictions = classifier.predict(example_counts)
 print(predictions)
